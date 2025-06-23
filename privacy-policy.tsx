@@ -215,7 +215,7 @@ export default function PrivacyPolicy() {
                   </p>
                   <div className="bg-pink-50 p-4 rounded-lg text-center">
                     <p className="text-pink-800 font-medium">
-                      📧 Email us at: <strong>hello@catfinder.app</strong>
+                      📧 Email us at: <strong>tech@bugtech.com.cn</strong>
                     </p>
                     <p className="text-pink-600 text-sm mt-2">
                       We promise to respond with the same care we put into helping you find your kitty! 💕
