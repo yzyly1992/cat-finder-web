@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
- import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 
 const nextConfig: NextConfig = {
   /* config options here */
 };
 
- if (process.env.NODE_ENV === 'development') {
-   await setupDevPlatform();
- }
+// Setup dev platform for Cloudflare Pages in development
+if (process.env.NODE_ENV === 'development') {
+  (async () => {
+    const { setupDevPlatform } = await import('@cloudflare/next-on-pages/next-dev');
+    await setupDevPlatform();
+  })();
+}
 
 export default nextConfig;

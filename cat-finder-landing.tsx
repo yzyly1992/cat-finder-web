@@ -168,6 +168,30 @@ export default function Component() {
 
               <div className="flex gap-4 p-6 bg-pink-50 rounded-2xl">
                 <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="text-2xl">🎙️</div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-pink-800">Record Your Own Calls</h3>
+                  <p className="text-gray-600">
+                    Record your voice calling your cat's name - they know your voice best! 🗣️
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 p-6 bg-pink-50 rounded-2xl">
+                <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="text-2xl">🗺️</div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-pink-800">Search Area Tracker</h3>
+                  <p className="text-gray-600">
+                    Mark and track the areas you've searched to organize your rescue mission! 📍
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 p-6 bg-pink-50 rounded-2xl">
+                <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center flex-shrink-0">
                   <RotateCcw className="h-6 w-6 text-pink-600" />
                 </div>
                 <div>
@@ -288,6 +312,10 @@ export default function Component() {
         </p>
         <Link href="/privacy" className="text-xs hover:underline underline-offset-4 text-gray-500">
           Privacy Policy
+        </Link>
+        <span className="mx-2 text-gray-400">|</span>       
+        <Link href="/support" className="text-xs hover:underline underline-offset-4 text-gray-500">
+          Support
         </Link>
       </footer>
     </div>
