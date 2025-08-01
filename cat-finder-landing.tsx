@@ -3,36 +3,48 @@ import { Badge } from "@/components/ui/badge"
 import { Heart, Volume2, RotateCcw, Smartphone, Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import FAQ from "@/components/FAQ"
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-pink-50 to-white">
       {/* Header */}
       <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" aria-label="Cat Finder - Home">
           <div className="w-12 h-12 flex items-center justify-center">
-            {/* <Heart className="h-4 w-4 text-white" /> */}
             <Image
               src="/icon.png"
-              alt="Cat Icon"
+              alt="Cat Finder App Icon - Find Your Lost Cat"
               width={40}
               height={40}
+              priority
             />
           </div>
           <span className="font-bold text-xl text-gray-900">Cat Finder</span>
         </Link>
+        <nav className="ml-auto hidden md:flex gap-6" aria-label="Main navigation">
+          <Link href="#how-it-works" className="text-gray-600 hover:text-pink-600 transition-colors">
+            How It Works
+          </Link>
+          <Link href="#features" className="text-gray-600 hover:text-pink-600 transition-colors">
+            Features
+          </Link>
+          <Link href="#testimonials" className="text-gray-600 hover:text-pink-600 transition-colors">
+            Reviews
+          </Link>
+        </nav>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-16 md:py-24">
+        <section className="w-full py-16 md:py-24" aria-labelledby="hero-heading">
           <div className="container px-4 md:px-6 mx-auto text-center">
             <div className="max-w-4xl mx-auto space-y-8">
               <Badge className="bg-pink-100 text-pink-800 hover:bg-pink-200 text-lg px-4 py-2">
                 🐱 Find Your Lost Kitty
               </Badge>
 
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-gray-900">
+              <h1 id="hero-heading" className="text-4xl font-bold tracking-tight sm:text-6xl text-gray-900">
                 Bring Your Cat Home with
                 <span className="text-pink-600 block">Special Sounds! 🎵</span>
               </h1>
@@ -41,8 +53,8 @@ export default function Component() {
                 Lost your precious kitty? Our app plays special sounds that cats love to help guide them back to you! 💕
               </p>
 
-              <div className="flex items-center justify-center gap-2 text-pink-600">
-                <div className="flex">
+              <div className="flex items-center justify-center gap-2 text-pink-600" role="img" aria-label="4.9 out of 5 stars rating">
+                <div className="flex" aria-hidden="true">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-pink-400 text-pink-400" />
                   ))}
@@ -53,9 +65,15 @@ export default function Component() {
 
               {/* App Store Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Link href="#" className="transition-transform hover:scale-105">
+                <Link 
+                  href="https://apps.apple.com/us/app/cat-finder-48699b/id6747648400" 
+                  className="transition-transform hover:scale-105"
+                  aria-label="Download Cat Finder on the App Store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="bg-black text-white rounded-xl px-6 py-3 flex items-center gap-3 min-w-[200px]">
-                    <div className="text-2xl">📱</div>
+                    <div className="text-2xl" aria-hidden="true">📱</div>
                     <div className="text-left">
                       <div className="text-xs">Download on the</div>
                       <div className="text-lg font-semibold">App Store</div>
@@ -63,9 +81,13 @@ export default function Component() {
                   </div>
                 </Link>
 
-                <Link href="#" className="transition-transform hover:scale-105">
+                <Link 
+                  href="#" 
+                  className="transition-transform hover:scale-105"
+                  aria-label="Get Cat Finder on Google Play (Coming Soon)"
+                >
                   <div className="bg-black text-white rounded-xl px-6 py-3 flex items-center gap-3 min-w-[200px]">
-                    <div className="text-2xl">🤖</div>
+                    <div className="text-2xl" aria-hidden="true">🤖</div>
                     <div className="text-left">
                       <div className="text-xs">Get it on</div>
                       <div className="text-lg font-semibold">Google Play</div>
@@ -79,8 +101,9 @@ export default function Component() {
                   src="/cute-cat-with-owner.webp"
                   width={300}
                   height={400}
-                  alt="Cute cat with owner"
+                  alt="Happy cat owner reunited with their cute cat using Cat Finder app"
                   className="mx-auto rounded-3xl shadow-2xl border-4 border-pink-200"
+                  priority
                 />
               </div>
             </div>
@@ -88,10 +111,10 @@ export default function Component() {
         </section>
 
         {/* How It Works */}
-        <section className="w-full py-16 bg-pink-50">
+        <section id="how-it-works" className="w-full py-16 bg-pink-50" aria-labelledby="how-it-works-heading">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works ✨</h2>
+              <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-4">How It Works ✨</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Cats recognize special sounds that make them feel safe and loved. Our app plays these magical sounds to
                 help your kitty find their way home! 🏠
@@ -139,10 +162,10 @@ export default function Component() {
         </section>
 
         {/* Features */}
-        <section className="w-full py-16">
+        <section id="features" className="w-full py-16" aria-labelledby="features-heading">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Makes Us Special 🌟</h2>
+              <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-4">What Makes Us Special 🌟</h2>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
@@ -216,10 +239,10 @@ export default function Component() {
         </section>
 
         {/* Happy Stories */}
-        <section className="w-full py-16 bg-pink-50">
+        <section id="testimonials" className="w-full py-16 bg-pink-50" aria-labelledby="testimonials-heading">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Happy Kitty Stories 😻</h2>
+              <h2 id="testimonials-heading" className="text-3xl font-bold text-gray-900 mb-4">Happy Kitty Stories 😻</h2>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -268,6 +291,9 @@ export default function Component() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FAQ />
+
         {/* Final CTA */}
         <section className="w-full py-16 bg-gradient-to-r from-pink-500 to-pink-600">
           <div className="container px-4 md:px-6 mx-auto text-center">
@@ -278,7 +304,12 @@ export default function Component() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Link href="#" className="transition-transform hover:scale-105">
+                <Link 
+                  href="https://apps.apple.com/us/app/cat-finder-48699b/id6747648400" 
+                  className="transition-transform hover:scale-105"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="bg-white text-gray-900 rounded-xl px-6 py-3 flex items-center gap-3 min-w-[200px] shadow-lg">
                     <div className="text-2xl">📱</div>
                     <div className="text-left">
