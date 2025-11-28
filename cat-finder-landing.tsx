@@ -82,9 +82,11 @@ export default function Component() {
                 </Link>
 
                 <Link 
-                  href="#" 
+                  href="https://play.google.com/store/apps/details?id=com.yzyly.catfinder" 
                   className="transition-transform hover:scale-105"
-                  aria-label="Get Cat Finder on Google Play (Coming Soon)"
+                  aria-label="Get Cat Finder on Google Play"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className="bg-black text-white rounded-xl px-6 py-3 flex items-center gap-3 min-w-[200px]">
                     <div className="text-2xl" aria-hidden="true">🤖</div>
