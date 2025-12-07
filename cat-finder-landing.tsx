@@ -66,7 +66,7 @@ export default function Component() {
               {/* App Store Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 <Link 
-                  href="https://apps.apple.com/us/app/cat-finder-48699b/id6747648400" 
+                  href="https://apps.apple.com/app/id6747648400" 
                   className="transition-transform hover:scale-105"
                   aria-label="Download Cat Finder on the App Store"
                   target="_blank"
@@ -307,7 +307,7 @@ export default function Component() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 <Link 
-                  href="https://apps.apple.com/us/app/cat-finder-48699b/id6747648400" 
+                  href="https://apps.apple.com/app/id6747648400" 
                   className="transition-transform hover:scale-105"
                   target="_blank"
                   rel="noopener noreferrer"

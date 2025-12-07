@@ -23,7 +23,7 @@ export default function StructuredData() {
       "name": "Cat Finder Team"
     },
     "downloadUrl": [
-      "https://apps.apple.com/us/app/cat-finder-48699b/id6747648400"
+      "https://apps.apple.com/app/id6747648400"
     ],
     "screenshot": "/cute-cat-with-owner.webp",
     "featureList": [
@@ -43,7 +43,7 @@ export default function StructuredData() {
     "url": "https://catfinder.qzz.io",
     "logo": "https://catfinder.qzz.io/icon.png",
     "sameAs": [
-      "https://apps.apple.com/us/app/cat-finder-48699b/id6747648400"
+      "https://apps.apple.com/app/id6747648400"
     ]
   };
 
