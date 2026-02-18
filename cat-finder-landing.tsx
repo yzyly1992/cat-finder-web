@@ -321,7 +321,7 @@ export default function Component() {
                   </div>
                 </Link>
 
-                <Link href="#" className="transition-transform hover:scale-105">
+                <Link href="https://play.google.com/store/apps/details?id=com.yzyly.catfinder" className="transition-transform hover:scale-105">
                   <div className="bg-white text-gray-900 rounded-xl px-6 py-3 flex items-center gap-3 min-w-[200px] shadow-lg">
                     <div className="text-2xl">🤖</div>
                     <div className="text-left">
